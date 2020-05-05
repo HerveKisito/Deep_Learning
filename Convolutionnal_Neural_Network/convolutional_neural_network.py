@@ -17,13 +17,13 @@ train_datagen = ImageDataGenerator(rescale = 1./255,
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
 # Creating the Training set
-training_set = train_datagen.flow_from_directory('dataset/training_set',
+training_set = train_datagen.flow_from_directory('../data/images/training_set',
                                                  target_size = (64, 64),
                                                  batch_size = 32,
                                                  class_mode = 'binary')
 
 # Creating the Test set
-test_set = test_datagen.flow_from_directory('dataset/test_set',
+test_set = test_datagen.flow_from_directory('../data/images/test_set',
                                             target_size = (64, 64),
                                             batch_size = 32,
                                             class_mode = 'binary')
